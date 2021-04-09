@@ -1,0 +1,54 @@
+// To push directory in github repository
+
+git init
+
+git add .			 // To add all files and folders of current directory
+  or
+git add <filename.extension> 	 // To add selected file
+
+git commit -m "first commit" 	 // To save all updated files
+
+git branch -M main		 // "main" branch
+
+git remote add origin https://github.com/Vishwesh32/repository_name.git
+
+git push origin main or <your-git-branch> 	// To push your-git-branch(containing commited files) into your-added-origin
+
+
+
+// To remove directory from github repository
+
+git rm -r directory_name	  // To remove selected directory
+
+git commit . -m "changed commit"  // To save all updated files
+
+git push origin main
+
+
+
+// To ignore directories or files
+
+Create .gitignore file on root of your main project directory
+
+Any lines that start with # are comments
+
+Write following code into .gitignore file
+
+
+# any file or any directory
+
+directory_name/ 	# To ignore entire directory
+
+.file_name		# To ignore selected file
+
+
+
+// To push all updated files				// To push single updated file
+
+git commit . -m "updated commit"  			git add "file_name.extension"
+
+git push origin main					git commit -m "updated commit"
+	
+							git push origin main
+
+ 
