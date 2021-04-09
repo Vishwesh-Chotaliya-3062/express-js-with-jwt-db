@@ -17,7 +17,7 @@ module.exports.authorize = function (req, res) {
     console.log(decoded);
     var username = decoded.data;
 
-    var sql = "SELECT vehicleregistration.UserID, user.UserName, vehicleregistration.VehicleID, " +
+    var sql = "SELECT user.UserID, user.UserName, vehicle.VehicleID, " +
     "GROUP_CONCAT(vehicle.VehicleName SEPARATOR ',') as VehicleName, " +
     "vehicleregistration.vehicleregistrationID, vehicleregistration.RegistrationDate, " +
     "vehicleregistration.ExpiryDate from vehicle JOIN vehicleregistration ON " +

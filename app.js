@@ -37,9 +37,11 @@ app.use('/users', listByUserNameRouter);
 
 var userAuthenticationROuter = require('./routes/User Auth/userAuthentication')
 var userAuthorizationROuter = require('./routes/User Auth/userAuthorization')
+var userCreationROuter = require('./routes/User Auth/userCreation')
 
 app.use('/', userAuthenticationROuter,
-  userAuthorizationROuter);
+  userAuthorizationROuter,
+  userCreationROuter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
