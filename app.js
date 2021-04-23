@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
 
+//For Employees
+var employeesOperationRouter = require('./routes/Employees/CRUD')
+app.use('/', employeesOperationRouter);
+
 //For States
 var allStatesROuter = require('./routes/States/allStates')
 var allStatesIdByIdRouter = require('./routes/States/allStatesIdbyId')

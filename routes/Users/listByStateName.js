@@ -9,7 +9,7 @@ router.get('/state-list/:statename', function (req, res, next) {
 
   const Sname = req.params.statename;
 
-  var sql = "SELECT states.StateID, states.StateName, vehicleregistration.VehicleID, " +
+  var sql = "SELECT states.StateID, states.StateName, GROUP_CONCAT(vehicle.VehicleID SEPARATOR ',') as VehicleID, " +
     "GROUP_CONCAT(vehicle.VehicleName SEPARATOR ',') as VehicleName, " +
     "vehicleregistration.vehicleregistrationID, vehicleregistration.RegistrationDate, " +
     "vehicleregistration.ExpiryDate from vehicle JOIN vehicleregistration ON " +
